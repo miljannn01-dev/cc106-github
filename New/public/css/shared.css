@@ -1,0 +1,94 @@
+/* Updated with soft pastel purple color scheme */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f9f7fc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4a5e8;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c68edb;
+}
+
+/* Pastel purple color palette */
+:root {
+    --primary-color: #d4a5e8;
+    --secondary-color: #c68edb;
+    --accent-color: #ff9a9a;
+    --success-color: #85d88a;
+    --warning-color: #ffc97c;
+    --info-color: #a8c5e0;
+    --light-bg: #f9f7fc;
+    --dark-text: #5a3fa3;
+    --border-color: #e8d9f0;
+}
+
+/* Global Transitions */
+button, a, input, textarea, select {
+    transition: all 0.3s ease;
+}
+
+body {
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d4a5e8 0%, #c68edb 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(212, 165, 232, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(212, 165, 232, 0.35);
+}
+
+.btn-secondary {
+    background: white;
+    color: #c68edb;
+    border: 2px solid #d4a5e8;
+}
+
+.btn-secondary:hover {
+    background: #f9f7fc;
+    transform: translateY(-2px);
+}

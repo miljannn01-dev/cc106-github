@@ -1,0 +1,203 @@
+/* Application Form Styles for Complex Forms */
+.form-steps {
+    margin-bottom: 30px;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0;
+    border-bottom: 2px solid #e8d9f0;
+}
+
+.step {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    color: #a89bb8;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step.active {
+    color: #5a3fa3;
+    border-bottom-color: #d4a5e8;
+}
+
+.step:hover {
+    color: #c68edb;
+}
+
+.step-content {
+    animation: fadeIn 0.3s ease-in;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dynamic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(90, 63, 163, 0.1);
+}
+
+.dynamic-table thead {
+    background: linear-gradient(135deg, #f9f7fc 0%, #f3e9f8 100%);
+}
+
+.dynamic-table th {
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #5a3fa3;
+    font-size: 13px;
+    border-bottom: 3px solid #d4a5e8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dynamic-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.dynamic-table tbody tr:hover {
+    background-color: #fcfaff;
+}
+
+.dynamic-table tbody tr:nth-child(even) {
+    background-color: #faf9fc;
+}
+
+.dynamic-table tbody tr:nth-child(even):hover {
+    background-color: #f5f0fa;
+}
+
+.dynamic-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e8d9f0;
+    vertical-align: middle;
+}
+
+.dynamic-table input,
+.dynamic-table textarea,
+.dynamic-table select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e8d9f0;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.dynamic-table input:focus,
+.dynamic-table textarea:focus,
+.dynamic-table select:focus {
+    outline: none;
+    border-color: #d4a5e8;
+    box-shadow: 0 0 0 3px rgba(212, 165, 232, 0.15);
+    background: #fff;
+}
+
+.dynamic-table input[readonly] {
+    background: #f1f8f4;
+    border-color: #c8e6c9;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+.dynamic-table textarea {
+    resize: vertical;
+    min-height: 60px;
+    line-height: 1.5;
+}
+
+.dynamic-table select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a3fa3' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 35px;
+}
+
+.table-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(90, 63, 163, 0.08);
+    overflow-x: auto;
+}
+
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #d4a5e8;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #c68edb;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .step-indicator {
+        flex-direction: column;
+    }
+    
+    .step {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        text-align: left;
+    }
+    
+    .step.active {
+        border-left-color: #d4a5e8;
+        border-bottom-color: transparent;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .dynamic-table {
+        font-size: 11px;
+    }
+    
+    .dynamic-table th,
+    .dynamic-table td {
+        padding: 8px 5px;
+    }
+}
+

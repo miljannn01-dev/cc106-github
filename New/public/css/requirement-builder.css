@@ -1,0 +1,82 @@
+/* Requirement Builder Styles */
+.requirement-section {
+    transition: all 0.3s ease;
+}
+
+.requirement-section:hover {
+    box-shadow: 0 4px 12px rgba(212, 165, 232, 0.2);
+}
+
+.section-title-input {
+    transition: border-color 0.3s ease;
+}
+
+.section-title-input:focus {
+    outline: none;
+    border-color: #5a3fa3 !important;
+    box-shadow: 0 0 0 3px rgba(90, 63, 163, 0.1);
+}
+
+.field-item {
+    transition: all 0.2s ease;
+}
+
+.field-item:hover {
+    border-color: #d4a5e8 !important;
+    box-shadow: 0 2px 8px rgba(212, 165, 232, 0.15);
+}
+
+.field-label-input:focus,
+.field-type-select:focus,
+.field-options-input:focus {
+    outline: none;
+    border-color: #d4a5e8 !important;
+    box-shadow: 0 0 0 2px rgba(212, 165, 232, 0.1);
+}
+
+.no-requirements {
+    border: 2px dashed #e8d9f0;
+}
+
+.btn-small {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-small:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete:hover {
+    background: #ff6b6b !important;
+}
+
+#requirementBuilder {
+    scrollbar-width: thin;
+    scrollbar-color: #d4a5e8 #f9f7fc;
+}
+
+#requirementBuilder::-webkit-scrollbar {
+    width: 8px;
+}
+
+#requirementBuilder::-webkit-scrollbar-track {
+    background: #f9f7fc;
+    border-radius: 4px;
+}
+
+#requirementBuilder::-webkit-scrollbar-thumb {
+    background: #d4a5e8;
+    border-radius: 4px;
+}
+
+#requirementBuilder::-webkit-scrollbar-thumb:hover {
+    background: #c68edb;
+}
+
